@@ -1,19 +1,15 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_put_nbr
+** edfc
 ** File description:
-** Write a function that displays
-** the number given
-** as a parameter. It must be able to display
-** all the possible
-** values of an int, and must be prototyped as follows:
+** wedfc
 */
 #include <stdio.h>
 #include "my.h"
 
 
 
-int my_put_nbr_rec(long long int nb, int a)
+int my_put_nbr_rec_format_h(int nb, int a)
 {
     int m = 0;
 
@@ -24,12 +20,12 @@ int my_put_nbr_rec(long long int nb, int a)
     }
     m = nb % 10;
     a++;
-    a = my_put_nbr_rec(nb / 10, a);
+    a = my_put_nbr_rec_format_h(nb / 10, a);
     my_putchar(m + '0');
     return a;
 }
 
-int my_put_nbr(long long int nb)
+int my_put_nbr_format_h(short int nb)
 {
     int a = 0;
 
@@ -38,5 +34,12 @@ int my_put_nbr(long long int nb)
         nb = -nb;
         a++;
     }
-    return my_put_nbr_rec(nb, a);
+    return my_put_nbr_rec_format_h(nb, a);
+}
+
+int print_format_h(va_list list, void *)
+{
+    int a = my_put_nbr_format_h(va_arg(list, int));
+
+    return a;
 }

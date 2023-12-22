@@ -6,7 +6,7 @@
 ** The destination string will already have enough memory
 ** to copy the source string
 */
-#include "../../include/my.h"
+#include "my.h"
 
 char *my_strcpy(char *dest, char *src)
 {

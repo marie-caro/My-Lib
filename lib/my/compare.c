@@ -4,7 +4,7 @@
 ** File description:
 ** compare.c
 */
-#include "../../include/my.h"
+#include "my.h"
 
 int compare_function(void *data, void *ref)
 {

@@ -12,7 +12,8 @@
 */
 #include <stdbool.h>
 #include <stdio.h>
-#include "../../include/my.h"
+#include "my.h"
+
 
 // Not actual equivalent to strcmp -> just tells if exactly same string
 bool my_strcmp(char *str, char *str2)

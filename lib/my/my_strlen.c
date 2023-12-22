@@ -4,7 +4,7 @@
 ** File description:
 ** df
 */
-#include "../../include/my.h"
+#include "my.h"
 
 int my_strlen(char *str)
 {
