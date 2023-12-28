@@ -16,6 +16,7 @@ This repository serves as a personal library of functions that I find useful in 
              + len modifiers: h, l
              + flags: +, #
 + my_int_to_str: take an number and output said number as a string.
++ my_revert: reverts a given string. (found in int_to_str.c file)
 + my_strcat: concatenate two strings.
 + my_strncat: concatenate x chars from a string with another.
 + my_strdup: duplicates a string into another.
