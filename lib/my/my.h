@@ -31,7 +31,8 @@ char *my_strncat(char *dest, char *src, int nb);
 char *my_strcat(char *dst, char *src);
 char *my_int_to_str(long long int nb);
 int compare_function(void *data, void *ref);
-int how_many_rows(char *filepath);
+int how_many_rows_file(char *filepath);
+int how_many_rows_str(char *buffer);
 char **read_file(int ac, char **av);
 
 //##### Printf #############################################################//
