@@ -18,11 +18,9 @@ int how_many_rows(char *filepath)
     fd = open(filepath, O_RDONLY);
     read(fd, buffer, sb.st_size);
     for (int i = 0; buffer[i] != '\0'; i++) {
-        printf("%i\n", i);
         if (buffer[i] == '\n')
             count += 1;
     }
-    printf("\ncount: %i\n", count);
     close(fd);
     free(buffer);
     return count;
