@@ -6,7 +6,7 @@
 */
 #include "my.h"
 
-int how_many_rows(char *filepath)
+int how_many_rows_file(char *filepath)
 {
     struct stat sb;
     int fd = 0;
@@ -23,5 +23,15 @@ int how_many_rows(char *filepath)
     }
     close(fd);
     free(buffer);
+    return count;
+}
+
+int how_many_rows_str(char *buffer)
+{
+    int count = 0;
+
+    for (int i = 0; buffer[i] != '\0'; i++)
+        if (buffer[i] == '\n')
+            count += 1;
     return count;
 }
