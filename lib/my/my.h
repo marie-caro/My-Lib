@@ -34,6 +34,8 @@ int compare_function(void *data, void *ref);
 int how_many_rows_file(char *filepath);
 int how_many_rows_str(char *buffer);
 char **read_file(int ac, char **av);
+float str_to_float(char *str);
+float str_to_float_lib(char *str);
 
 //##### Printf #############################################################//
 
