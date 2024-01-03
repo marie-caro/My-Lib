@@ -32,7 +32,8 @@ SRC = 	my_putchar.c\
 	my_printf/my_put_nbr3.c\
 	my_printf/my_printf.c\
 	my_printf/my_put_all_p.c\
-	my_printf/my_put_nbr4.c
+	my_printf/my_put_nbr4.c\
+	str_to_float.c\
 
 NAME = libmy.a
 
