@@ -25,3 +25,5 @@ This repository serves as a personal library of functions that I find useful in 
 + my_strcmp: compare two strings || different from the original strcmp -> this function returns false if both strings are different and true if they are the same.
 + how_many_rows: given a string that represents any kind of rectangle, count how manys rows there are.
 + read_file: read a file and store its content into an array.
++ str_to_float: take a string an output the corresponding float. || doesn't use stdio lib
++ str_to_float_lib: take a string an output the corresponding float. || uses of stdio lib
