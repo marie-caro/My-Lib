@@ -17,7 +17,7 @@ char **my_arrcpy(char **arr)
     for (count; arr[count] != NULL; count++);
     my_arr = malloc(sizeof(char *) * (count + 1));
     for (i; arr[i] != NULL; i++) {
-        my_arr[i] = malloc(sizeof(char) * (my_strlenn(arr[i]) + 1));
+        my_arr[i] = malloc(sizeof(char) * (my_strlen(arr[i]) + 1));
         for (j = 0; arr[i][j] != '\0'; j++)
             my_arr[i][j] = arr[i][j];
         my_arr[i][j] = '\0';

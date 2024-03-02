@@ -16,7 +16,7 @@ char **my_str_to_word_array(char *buffer, char delimiter)
     char **arr = malloc(sizeof(char *) * (rows + 1));
 
     for (i; buffer[k] != '\0'; i++) {
-        arr[i] = malloc(sizeof(char) * my_strlenn(buffer) + 1);
+        arr[i] = malloc(sizeof(char) * my_strlen(buffer) + 1);
         for (j = 0; buffer[k] != delimiter && buffer[k] != '\0'; j++) {
             arr[i][j] = buffer[k];
             k++;

@@ -17,6 +17,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
+#include <string.h>
 
 //##### Basic #############################################################//
 void my_putchar(char c);
@@ -34,6 +35,7 @@ int compare_function(void *data, void *ref);
 int how_many_rows_file(char *filepath);
 int how_many_rows_str(char *buffer);
 char **read_file(int ac, char **av);
+char **read_file_noarg(char *filepath);
 float str_to_float(char *str);
 float str_to_float_lib(char *str);
 int my_bin_to_dec(int bin);
@@ -43,6 +45,7 @@ int how_many(char *str, char character);
 char *get_line(char **arr, int line);
 char **my_arrcpy(char **arr);
 void my_free_arr(char **arr);
+char **my_str_to_word_array(char *buffer, char delimiter);
 
 //##### Printf #############################################################//
 

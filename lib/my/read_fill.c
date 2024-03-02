@@ -12,6 +12,16 @@ int my_putchar_error(char c)
     return 0;
 }
 
+int how_many_rows_str(char *buffer)
+{
+    int count = 0;
+
+    for (int i = 0; buffer[i] != '\0'; i++)
+        if (buffer[i] == ' ')
+            count += 1;
+    return count + 1;
+}
+
 char **load_to_arr(char *buffer)
 {
     char *tmp = my_strdup(buffer);
@@ -21,9 +31,9 @@ char **load_to_arr(char *buffer)
     int j = 0;
     int k = 0;
 
-    for (; tmp[k]!= '\0'; i++) {
+    for (; tmp[k] != '\0'; i++) {
         arr[i] = malloc(sizeof(char) * 30);
-        for (j = 0; tmp[k] != '\n'; j++) {
+        for (j = 0; tmp[k] != '\0' && tmp[k] != '\n'; j++) {
             arr[i][j] = tmp[k];
             k++;
         }
@@ -34,6 +44,16 @@ char **load_to_arr(char *buffer)
     return arr;
 }
 
+static char *my_memsetset(char *str)
+{
+    int i = 0;
+
+    for (i; i < 30000; i++)
+        str[i] = '0';
+    str[i] = '\0';
+    return str;
+}
+
 char **read_file(int ac, char **av)
 {
     int fd = 0;
@@ -41,16 +61,29 @@ char **read_file(int ac, char **av)
     char **arr = malloc(sizeof(char) * 30000);
     int bytes_read = 0;
 
-    if (ac < 2) {
-        print_error();
+    if (ac < 2)
         return NULL;
-    }
-    memset(buffer, 0, sizeof(char) * 30000);
+    buffer = my_memsetset(buffer);
     for (int i = 1; i < ac; i++) {
         fd = open(av[i], O_RDONLY);
-        bytes_read = read(fd, buffer,30000);
+        bytes_read = read(fd, buffer, 30000);
         arr = load_to_arr(buffer);
         close(fd);
     }
+    return arr;
+}
+
+char **read_file_noarg(char *filepath)
+{
+    int fd = 0;
+    char *buffer = malloc(sizeof(char) * 30000);
+    char **arr = malloc(sizeof(char) * 30000);
+    int bytes_read = 0;
+
+    fd = open(filepath, O_RDONLY);
+    bytes_read = read(fd, buffer, 30000);
+    buffer[bytes_read] = '\0';
+    arr = my_str_to_word_array(buffer, '\n');
+    close(fd);
     return arr;
 }

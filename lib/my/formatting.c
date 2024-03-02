@@ -11,7 +11,7 @@ char *formatting(char *str)
 {
     int j = 0;
     int k = 0;
-    char *tmp = malloc(sizeof(char) * my_strlenn(str));
+    char *tmp = malloc(sizeof(char) * my_strlen(str));
 
     for (j; str[j] != '\0'; j++) {
         while ((str[j - 1] && str[j] == ' '

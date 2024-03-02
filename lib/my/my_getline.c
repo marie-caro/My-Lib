@@ -10,7 +10,7 @@
 char *get_line(char **arr, int line)
 {
     int i = 0;
-    int len = my_strlenn(arr[line]);
+    int len = my_strlen(arr[line]);
     char *tmp = malloc(sizeof(char) * (len + 1));
 
     for (; i < len; i++) {

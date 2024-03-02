@@ -32,3 +32,5 @@ int how_many(char *str, char character);
 char *get_line(char **arr, int line);
 char **my_arrcpy(char **arr);
 void my_free_arr(char **arr);
+char **read_file_noarg(char *filepath);
+char **read_file(int ac, char **av);
