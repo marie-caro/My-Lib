@@ -7,6 +7,10 @@
 
 #pragma once
 #include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <math.h>
 
 void my_putchar(char c);
 int my_strlen(char *str);
@@ -20,3 +24,4 @@ char *my_strncat(char *dest, char *src, int nb);
 char *my_strcat(char *dst, char *src);
 char *my_int_to_str(long long int nb);
 int compare_function(void *data, void *ref);
+char **my_str_to_word_array(char *buffer, char delimiter);

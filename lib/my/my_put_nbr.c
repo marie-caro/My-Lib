@@ -8,10 +8,7 @@
 ** all the possible
 ** values of an int, and must be prototyped as follows:
 */
-#include <stdio.h>
 #include "my.h"
-
-
 
 int my_put_nbr_rec(long long int nb, int a)
 {

@@ -36,6 +36,13 @@ int how_many_rows_str(char *buffer);
 char **read_file(int ac, char **av);
 float str_to_float(char *str);
 float str_to_float_lib(char *str);
+int my_bin_to_dec(int bin);
+char *my_memset(char *str, int num);
+char *formatting(char *str);
+int how_many(char *str, char character);
+char *get_line(char **arr, int line);
+char **my_arrcpy(char **arr);
+void my_free_arr(char **arr);
 
 //##### Printf #############################################################//
 

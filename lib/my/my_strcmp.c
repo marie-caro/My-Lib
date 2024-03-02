@@ -10,10 +10,7 @@
 ** - a negative value if s1 is less than s2;
 ** - a positive value if s1 is greater than s2.
 */
-#include <stdbool.h>
-#include <stdio.h>
 #include "my.h"
-
 
 // Not actual equivalent to strcmp -> just tells if exactly same string
 bool my_strcmp(char *str, char *str2)
@@ -26,4 +23,12 @@ bool my_strcmp(char *str, char *str2)
         }
     }
     return true;
+}
+
+int compare_function(void *data, void *ref)
+{
+    if (my_strcmp((char *) data, (char *) ref) == 1) {
+        return 1;
+    }
+    return 0;
 }

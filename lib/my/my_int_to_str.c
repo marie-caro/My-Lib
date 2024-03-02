@@ -4,8 +4,6 @@
 ** File description:
 ** int_to_str.c
 */
-#include <stdlib.h>
-#include <stdio.h>
 #include "my.h"
 
 char *my_revert(char *str)

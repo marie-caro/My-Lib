@@ -5,8 +5,7 @@
 ** str_to_float.c
 */
 
-#include <math.h>
-#include <stdio.h>
+#include "my.h"
 
 // Uses stdio lib
 float str_to_float_lib(char *str)

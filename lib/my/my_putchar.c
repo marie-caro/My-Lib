@@ -4,11 +4,7 @@
 ** File description:
 ** ere
 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "my.h"
-
 
 void my_putchar(char c)
 {
